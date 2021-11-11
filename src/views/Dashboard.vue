@@ -4,13 +4,16 @@
       <div class="col-9 mb-4">
         <div class="card h-100">
           <div class="card-body d-flex justify-content-around">
-            <button @click="decreaseTemperature" class="btn btn-outline-danger">
+            <button
+              @click="decreaseTemperature"
+              class="btn btn-outline-danger touch-action-manipulation"
+            >
               -
             </button>
             <span class="h3">{{ targetTemperature.toFixed(2) }} °C</span>
             <button
               @click="increaseTemperature"
-              class="btn btn-outline-success"
+              class="btn btn-outline-success touch-action-manipulation"
             >
               +
             </button>
@@ -21,7 +24,10 @@
       <div class="col-3 mb-4">
         <div class="card h-100">
           <div class="card-body d-flex justify-content-around">
-            <button @click="setTargetTemperature" class="btn btn-primary">
+            <button
+              @click="setTargetTemperature"
+              class="btn btn-primary touch-action-manipulation"
+            >
               Ok
             </button>
           </div>
@@ -42,11 +48,11 @@
             <button
               v-if="isHeating"
               @click="toggleHeating"
-              class="btn btn-success"
+              class="btn btn-success touch-action-manipulation"
             >
               Açık
             </button>
-            <button v-else @click="toggleHeating" class="btn btn-danger">
+            <button v-else @click="toggleHeating" class="btn btn-danger touch-action-manipulation">
               Kapat
             </button>
           </div>
